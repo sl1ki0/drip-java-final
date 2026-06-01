@@ -1,0 +1,39 @@
+plugins {
+    id 'application'
+}
+
+group = 'com.newsaggregator'
+version = '1.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.xerial:sqlite-jdbc:3.45.3.0'
+    implementation 'org.jsoup:jsoup:1.17.2'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    runtimeOnly 'org.slf4j:slf4j-nop:2.0.13'
+
+    testImplementation platform('org.junit:junit-bom:5.10.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+application {
+    mainClass = 'com.newsaggregator.App'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.named('run') {
+    standardInput = System.in
+}
