@@ -1,0 +1,5 @@
+[
+  { "name": "Lenta.ru", "rssUrl": "https://lenta.ru/rss/news" },
+  { "name": "РИА Новости", "rssUrl": "https://ria.ru/export/rss2/archive/index.xml" },
+  { "name": "Российская газета", "rssUrl": "https://rg.ru/xml/index.xml" }
+]
